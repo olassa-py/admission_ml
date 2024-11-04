@@ -9,7 +9,7 @@ warnings.filterwarnings('ignore')
 
 password_guess = st.text_input("What is the Password?")
 if password_guess != st.secrets["password"]:
-st.stop()
+    st.stop()
 
 # Set up the app title and image
 st.title('Graduate Admission Predictor 🌟')
