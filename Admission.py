@@ -7,6 +7,9 @@ import pickle
 import warnings
 warnings.filterwarnings('ignore')
 
+password_guess = st.text_input("What is the Password?")
+if password_guess != st.secrets["password"]:
+st.stop()
 
 # Set up the app title and image
 st.title('Graduate Admission Predictor 🌟')
@@ -89,7 +92,7 @@ with tab2:
     st.image('residual_plot.svg')
     st.caption("Distribution of residuals to evaluate prediction quality.")
 with tab3:
-    st.write("### Plot of Predicte Vs. Actual")
+    st.write("### Plot of Predicted Vs. Actual")
     st.image('pred_vs_actual.svg')
     st.caption("Visual comparison of predicted and actual values.")
 with tab4:
